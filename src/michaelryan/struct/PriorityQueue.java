@@ -13,9 +13,9 @@ import java.util.Iterator;
 public interface PriorityQueue<T> {
 
     /**
-     * Returns true if this priority queue is empty.
+     * Returns true if this priority queue contains no elements.
      *
-     * @return true if this priority queue is empty
+     * @return true if this priority queue contains no elements.
      */
     boolean isEmpty();
 

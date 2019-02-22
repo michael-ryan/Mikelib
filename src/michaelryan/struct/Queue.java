@@ -13,9 +13,9 @@ import java.util.Iterator;
 public interface Queue<T> {
 
     /**
-     * Returns true if this queue is empty.
+     * Returns true if this queue contains no elements.
      *
-     * @return true if this queue is empty
+     * @return true if this queue contains no elements
      */
     boolean isEmpty();
 
