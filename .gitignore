@@ -6,6 +6,9 @@
 out/
 *.iml
 
+# documentation
+doc/
+
 # Log file
 *.log
 
