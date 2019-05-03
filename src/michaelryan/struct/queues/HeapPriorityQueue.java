@@ -1,4 +1,4 @@
-package michaelryan.struct;
+package michaelryan.struct.queues;
 
 import java.util.ArrayList;
 import java.util.Iterator;
