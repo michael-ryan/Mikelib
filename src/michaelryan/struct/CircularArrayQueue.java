@@ -7,6 +7,7 @@ import java.util.NoSuchElementException;
  * A circular queue implemented by an array. The array will be of length 0 by default, then increase to 1 in length
  * when an item is enqueued. From then on, when required, the array will double in length.
  */
+@SuppressWarnings("unused")
 public class CircularArrayQueue<T> implements Queue<T> {
 
     private T[] data;
@@ -17,6 +18,7 @@ public class CircularArrayQueue<T> implements Queue<T> {
     /**
      * Creates a new empty {@link CircularArrayQueue}
      */
+    @SuppressWarnings("unchecked")
     public CircularArrayQueue(){
         this.data = (T[]) new Object[0];
         this.head = -1;
@@ -91,13 +93,14 @@ public class CircularArrayQueue<T> implements Queue<T> {
      *
      * @param in the item to be added to the back of this queue
      */
+    @SuppressWarnings("unchecked")
     public void add(T in){
         if(this.data.length == 0){ // If we have a zero length array, make it a 1 length array.
             this.data = (T[]) new Object[1];
         } else if(this.noItems == this.data.length){ // If the array is full, double the length of it
             // Shift the data backwards so the tail is at index 0, and the head is at the last position of the array.
             // This is so when we introduce new unused spaces, they're not created in the middle of the queue.
-            this.data = shiftToStart(this.data, this.head, this.tail);
+            this.data = this.shiftToStart(this.data, this.head, this.tail);
             this.tail = 0;
             this.head = this.noItems - 1;
 
@@ -106,9 +109,7 @@ public class CircularArrayQueue<T> implements Queue<T> {
             this.data = (T[]) new Object[2 * this.data.length];
 
             // Copy from temp back to this.data
-            for(int index = 0; index < temp.length; index++){
-                this.data[index] = temp[index];
-            }
+            System.arraycopy(temp, 0, this.data, 0, temp.length);
         }
 
         // Add the new item
@@ -154,6 +155,7 @@ public class CircularArrayQueue<T> implements Queue<T> {
      * @param tail the tail index of the queue
      * @return the given array queue but with the tail at index 0
      */
+    @SuppressWarnings("unchecked")
     private T[] shiftToStart(T[] data, int head, int tail){
         T[] temp = (T[]) new Object[data.length];
         int i = -1;
