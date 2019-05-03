@@ -10,6 +10,7 @@ import java.util.Iterator;
  * </p>
  * @param <T> the type of elements held in this priority queue
  */
+@SuppressWarnings({"WeakerAccess", "unused"})
 public interface PriorityQueue<T> {
 
     /**

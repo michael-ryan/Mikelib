@@ -10,6 +10,7 @@ import java.util.Iterator;
  * </p>
  * @param <T> the type of elements held in this queue
  */
+@SuppressWarnings("unused")
 public interface Queue<T> {
 
     /**
@@ -34,9 +35,9 @@ public interface Queue<T> {
     void add(T newItem);
 
     /**
-     * Returns and removes the item at the front of this queue.
+     * Returns and removes the item at the front of this queue, or null if it's empty.
      *
-     * @return the item at the front of this queue
+     * @return the item at the front of this queue, or null if it's empty.
      */
     T dequeue();
 
