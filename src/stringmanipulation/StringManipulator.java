@@ -26,6 +26,17 @@ public final class StringManipulator {
         return String.valueOf(chars);
     }
 
+    /**
+     * Returns a random character contained by the given string. If there are duplicate characters, a roulette
+     * selection is performed, where selection probability is directly proportional to frequency.
+     *
+     * @param string the string to retrieve a random character from
+     * @return a random character contained by the given string
+     */
+    private static char randomCharacter(String string){
+        return string.toCharArray()[new Random(new Date().getTime()).nextInt(string.toCharArray().length)];
+    }
+
     public static void main(String[] args){
         StringManipulator.shuffle("abc");
     }
