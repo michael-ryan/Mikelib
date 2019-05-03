@@ -8,6 +8,7 @@ import java.util.List;
  *
  * @param <T> The type to store
  */
+@SuppressWarnings("unused")
 public class Stack<T> {
 
     private List<T> data;
@@ -34,7 +35,7 @@ public class Stack<T> {
      * @return the top item from this stack
      */
     public T pop(){
-        if(!this.isEmpty()){
+        if(this.isNotEmpty()){
             return this.data.remove(this.data.size() - 1);
         } else {
             throw new IndexOutOfBoundsException("Size: " + this.data.size());
@@ -46,8 +47,8 @@ public class Stack<T> {
      *
      * @return {@code true} if this stack is empty
      */
-    public boolean isEmpty(){
-        return this.data.size() == 0;
+    public boolean isNotEmpty(){
+        return this.data.size() != 0;
     }
 
     /**
@@ -56,7 +57,7 @@ public class Stack<T> {
      * @return the top item from this stack
      */
     public T peek(){
-        if(!this.isEmpty()){
+        if(this.isNotEmpty()){
             return this.data.get(this.data.size() - 1);
         } else {
             throw new IndexOutOfBoundsException("Size: " + this.data.size());
