@@ -5,9 +5,10 @@ import java.util.Iterator;
 /**
  * A priority queue.
  * <p>
- *     The order of items added to this queue is not retained, such that the element with the highest priority will
- *     always be the first to be removed. Elements of equal priority are removed in arbitrary order.
+ * The order of items added to this queue is not retained, such that the element with the highest priority will
+ * always be the first to be removed. Elements of equal priority are removed in arbitrary order.
  * </p>
+ *
  * @param <T> the type of elements held in this priority queue
  */
 @SuppressWarnings({"WeakerAccess", "unused"})

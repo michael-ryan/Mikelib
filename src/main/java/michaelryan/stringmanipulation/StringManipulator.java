@@ -1,4 +1,4 @@
-package stringmanipulation;
+package michaelryan.stringmanipulation;
 
 import java.util.*;
 

@@ -5,9 +5,10 @@ import java.util.Iterator;
 /**
  * A first-in first-out queue.
  * <p>
- *     The order of items added to this queue is retained, such that the first element added will be the first to
- *     be removed.
+ * The order of items added to this queue is retained, such that the first element added will be the first to
+ * be removed.
  * </p>
+ *
  * @param <T> the type of elements held in this queue
  */
 @SuppressWarnings("unused")

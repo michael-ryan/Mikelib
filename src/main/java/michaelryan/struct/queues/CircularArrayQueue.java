@@ -48,11 +48,6 @@ public class CircularArrayQueue<T> implements Queue<T> {
         return this.noItems;
     }
 
-    @Override
-    public int size(){
-        return this.noItems;
-    }
-
     /**
      * Gets the capacity remaining of the array implementing this queue
      *
@@ -63,8 +58,8 @@ public class CircularArrayQueue<T> implements Queue<T> {
     }
 
     @Override
-    public Iterator<T> iterator(){
-        return new CircularArrayQueueIterator();
+    public int size(){
+        return this.noItems;
     }
 
     private class CircularArrayQueueIterator implements Iterator<T> {
@@ -86,6 +81,13 @@ public class CircularArrayQueue<T> implements Queue<T> {
             return data[pointer];
         }
     }
+
+    @Override
+    public Iterator<T> iterator(){
+        return new CircularArrayQueueIterator();
+    }
+
+
 
     /**
      * Adds an item to the back of this queue. Doubles the size of the array implementing this queue if the array is
