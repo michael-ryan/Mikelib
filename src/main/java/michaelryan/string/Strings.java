@@ -1,4 +1,4 @@
-package michaelryan.stringmanipulation;
+package michaelryan.string;
 
 import java.util.*;
 
@@ -6,12 +6,12 @@ import java.util.*;
  * Static class for manipulating strings
  */
 @SuppressWarnings("unused")
-public final class StringManipulator {
+public final class Strings {
 
     /**
      * Don't let anyone instantiate this class
      */
-    private StringManipulator(){
+    private Strings(){
     }
 
     /**
@@ -38,7 +38,19 @@ public final class StringManipulator {
     }
 
     public static void main(String[] args){
-        StringManipulator.shuffle("abc");
+        System.out.println(Strings.isPalindrome("abba"));
+    }
+
+    public static boolean isPalindrome(String string){
+        int length = string.length();
+
+        for(int i = 0; i < Math.floorDiv(length, 2); i++){
+            if(string.charAt(i) != string.charAt(length - i - 1)){
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
