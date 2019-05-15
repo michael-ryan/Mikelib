@@ -8,4 +8,5 @@ I want to!
 
 ## I'd like to help!
 
-I'm not currently looking for maintainers for this project, but feel free to make a pull request if you spot an issue!
+I'm not currently looking for maintainers for this project, but feel free to make a pull request if you spot a bug or 
+issue!
