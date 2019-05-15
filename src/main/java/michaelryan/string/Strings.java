@@ -37,10 +37,6 @@ public final class Strings {
         return string.toCharArray()[new Random(new Date().getTime()).nextInt(string.toCharArray().length)];
     }
 
-    public static void main(String[] args){
-        System.out.println(Strings.isPalindrome("abba"));
-    }
-
     public static boolean isPalindrome(String string){
         int length = string.length();
 
