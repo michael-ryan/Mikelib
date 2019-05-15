@@ -7,7 +7,7 @@ import michaelryan.background.TaskCompleter;
  */
 public class Sleeper extends TaskCompleter {
 
-    private long millis;
+    private final long millis;
 
     /**
      * Constructs a new Sleeper with the specified number of milliseconds to sleep for.

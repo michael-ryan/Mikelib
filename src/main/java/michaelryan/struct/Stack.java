@@ -11,13 +11,23 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class Stack<T> {
 
-    private List<T> data;
+    private final List<T> data;
 
     /**
      * Constructs a new empty stack.
      */
     public Stack(){
         this.data = new ArrayList<>();
+    }
+
+    public static void main(String[] args){
+        Stack<Integer> intStack = new Stack<>();
+        intStack.push(1);
+
+        Stack<Boolean> boolStack = new Stack<>();
+        boolStack.push(false);
+
+        System.out.println(intStack.equals(boolStack));
     }
 
     /**
@@ -61,6 +71,16 @@ public class Stack<T> {
             return this.data.get(this.data.size() - 1);
         } else {
             throw new IndexOutOfBoundsException("Size: " + this.data.size());
+        }
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Stack){
+            Stack otherStack = (Stack) obj;
+            return this.data.equals(otherStack.data);
+        } else {
+            return false;
         }
     }
 }

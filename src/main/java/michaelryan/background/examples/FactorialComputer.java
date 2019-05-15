@@ -7,7 +7,7 @@ import michaelryan.background.TaskCompleter;
  */
 public class FactorialComputer extends TaskCompleter<Long> {
 
-    private int factorial;
+    private final int factorial;
 
     /**
      * Constructs a new FactorialComputer with the specified number to find the factorial of.
@@ -21,7 +21,7 @@ public class FactorialComputer extends TaskCompleter<Long> {
 
     @Override
     protected Long doTask(){
-        long answer = 1l;
+        long answer = 1L;
 
         for(int i = 2; i <= this.factorial; i++){
             answer *= i;
