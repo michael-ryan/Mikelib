@@ -10,3 +10,5 @@ I want to!
 
 I'm not currently looking for maintainers for this project, but feel free to make a pull request if you spot a bug or 
 issue!
+
+If you can come up with something you'd like to see in this library, open an issue for it!
