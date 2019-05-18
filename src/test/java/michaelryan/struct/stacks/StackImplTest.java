@@ -2,6 +2,8 @@ package michaelryan.struct.stacks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackImplTest {
@@ -31,7 +33,7 @@ class StackImplTest {
     @Test
     void shouldThrowWhenRetrievingWhileEmpty(){
         Stack stack = new StackImpl();
-        assertThrows(IndexOutOfBoundsException.class, stack::pop);
+        assertThrows(NoSuchElementException.class, stack::pop);
     }
 
     @Test
@@ -66,6 +68,6 @@ class StackImplTest {
     @Test
     void shouldThrowWhenPeekingWhileEmpty(){
         Stack stack = new StackImpl();
-        assertThrows(IndexOutOfBoundsException.class, stack::peek);
+        assertThrows(NoSuchElementException.class, stack::peek);
     }
 }

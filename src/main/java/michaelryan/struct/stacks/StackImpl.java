@@ -2,12 +2,8 @@ package michaelryan.struct.stacks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
-/**
- * A last-in first-out (LIFO) data structure.
- *
- * @param <T> The type to store
- */
 @SuppressWarnings("unused")
 public class StackImpl<T> implements Stack<T> {
 
@@ -30,7 +26,7 @@ public class StackImpl<T> implements Stack<T> {
         if(!this.isEmpty()){
             return this.data.remove(this.data.size() - 1);
         } else {
-            throw new IndexOutOfBoundsException("Size: " + this.data.size());
+            throw new NoSuchElementException("Size: " + this.data.size());
         }
     }
 
@@ -44,7 +40,7 @@ public class StackImpl<T> implements Stack<T> {
         if(!this.isEmpty()){
             return this.data.get(this.data.size() - 1);
         } else {
-            throw new IndexOutOfBoundsException("Size: " + this.data.size());
+            throw new NoSuchElementException("Size: " + this.data.size());
         }
     }
 }

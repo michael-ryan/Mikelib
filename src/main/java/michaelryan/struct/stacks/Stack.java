@@ -1,5 +1,10 @@
 package michaelryan.struct.stacks;
 
+/**
+ * A last-in first-out (LIFO) data structure.
+ *
+ * @param <T> The type to store
+ */
 public interface Stack<T> {
 
     /**
