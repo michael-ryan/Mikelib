@@ -40,7 +40,7 @@ public interface Queue<T> {
      *
      * @return the item at the front of this queue, or null if it's empty.
      */
-    T dequeue();
+    T get();
 
     /**
      * Returns but does not remove the item at the front of this queue.

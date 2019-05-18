@@ -106,7 +106,7 @@ public class CircularArrayQueue<T> implements Queue<T> {
      * @return the element at front of this queue
      * @throws NoSuchElementException if this queue is empty
      */
-    public T dequeue() throws NoSuchElementException{
+    public T get() throws NoSuchElementException{
         if(this.isEmpty()){
             throw new NoSuchElementException();
         }
