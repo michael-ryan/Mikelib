@@ -39,24 +39,6 @@ public class CircularArrayQueue<T> implements Queue<T> {
         this.noItems = data.length;
     }
 
-    /**
-     * Returns the number of items in this queue
-     *
-     * @return the number of items in this queue
-     */
-    public int noItems(){
-        return this.noItems;
-    }
-
-    /**
-     * Gets the capacity remaining of the array implementing this queue
-     *
-     * @return the capacity remaining of the array queue
-     */
-    public int getCapacityLeft(){
-        return this.data.length - this.noItems;
-    }
-
     @Override
     public int size(){
         return this.noItems;
@@ -86,8 +68,6 @@ public class CircularArrayQueue<T> implements Queue<T> {
     public Iterator<T> iterator(){
         return new CircularArrayQueueIterator();
     }
-
-
 
     /**
      * Adds an item to the back of this queue. Doubles the size of the array implementing this queue if the array is
