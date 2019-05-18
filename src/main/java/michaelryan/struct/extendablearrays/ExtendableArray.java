@@ -53,7 +53,7 @@ public interface ExtendableArray<T> {
      *
      * @return an array representation of this object
      */
-    T[] toArray();
+    Object[] toArray();
 
     /**
      * Returns the number of items stored in the array.

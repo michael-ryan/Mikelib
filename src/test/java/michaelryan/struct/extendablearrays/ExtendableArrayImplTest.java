@@ -33,7 +33,7 @@ class ExtendableArrayImplTest {
             returnedStrings[i] = extendableArray.get(i);
         }
 
-        assertEquals(testStrings, returnedStrings);
+        assertArrayEquals(testStrings, returnedStrings);
     }
 
     @Test
@@ -128,7 +128,11 @@ class ExtendableArrayImplTest {
     @Test
     void shouldNotChangeWhenArrayRepresentationEdited(){
         populate(2);
-        String[] data = extendableArray.toArray();
+        Object[] returnedArray = extendableArray.toArray();
+        String[] data = new String[returnedArray.length];
+        for(int i = 0; i < returnedArray.length; i++){
+            data[i] = (String) returnedArray[i];
+        }
         data[0] = "some new string";
         assertEquals("test string 1", extendableArray.get(0));
     }
