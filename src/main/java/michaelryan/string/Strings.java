@@ -33,7 +33,7 @@ public final class Strings {
      * @param string the string to retrieve a random character from
      * @return a random character contained by the given string
      */
-    private static char randomCharacter(String string){
+    public static char randomCharacter(String string){
         return string.toCharArray()[new Random(new Date().getTime()).nextInt(string.toCharArray().length)];
     }
 
