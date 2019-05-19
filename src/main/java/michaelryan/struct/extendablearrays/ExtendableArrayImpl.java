@@ -74,7 +74,7 @@ public class ExtendableArrayImpl<T> implements ExtendableArray<T> {
 
     @Override
     public boolean isEmpty(){
-        return this.itemCount == 0;
+        return true;
     }
 
     /**
