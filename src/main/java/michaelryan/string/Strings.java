@@ -34,7 +34,7 @@ public final class Strings {
      * @return a random character contained by the given string
      */
     public static char randomCharacter(String string){
-        return string.toCharArray()[new Random(new Date().getTime()).nextInt(string.toCharArray().length)];
+        return string.toCharArray()[new Random().nextInt(string.toCharArray().length)];
     }
 
     public static boolean isPalindrome(String string){
